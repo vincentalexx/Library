@@ -1,0 +1,60 @@
+.header-content{
+    min-height: 100vh;
+    background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(77, 77, 77, 0.6)), url('../images/home.avif') center/cover no-repeat;
+}
+
+.navbar-collapse {
+    animation: fades 1s;
+    animation-timeline: calc();
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 280px;
+    display: flex;
+    padding: 10rem 3rem 0 3rem;
+    /* background-color: #2A2A2A; */
+    background-color: black;
+    transform: translateX(100%);
+}
+
+.navbar-show {
+    transform: translateX(0);
+    animation: fade 1s;
+    animation-timeline: calc();
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+@media screen and (min-width: 1024px){
+    .navbar-collapse {
+        position: relative;
+        height: auto;
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+        transform: translateX(0);
+        justify-content: flex-end;
+    }
+}
+
+@keyframes fade {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes fades {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
