@@ -38,6 +38,7 @@ textarea:focus, input:focus{
         background-color: transparent;
         transform: translateX(0);
         justify-content: flex-end;
+        display: none;
     }
 }
 

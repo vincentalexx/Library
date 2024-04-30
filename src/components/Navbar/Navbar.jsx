@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className='fixed w-full bg-white ' id='navbar'>
         <div>
-            <div className='flex justify-between'>
+            <div className='flex justify-between px-5'>
                 <Link to='/' className='flex items-center'>
                     <img src={logo} alt="book" className='w-[10vh]'/>
                     <p>BookLab</p>
@@ -22,10 +22,10 @@ const Navbar = () => {
             <div className={toggleMenu ? 'navbar-show navbar-collapse lg:hidden lg:bg-transparent' : 'navbar-collapse lg:hidden lg:bg-transparent'}>
                 <ul className='text-white '>
                     <li className='py-4 pl-10'>
-                        <Link to='book' className='font-semibold hover:text-gray-400 transition-all 1s' style={{fontSize: '20px'}}>Home</Link>
+                        <Link to='/' className='font-semibold hover:text-gray-400 transition-all 1s' style={{fontSize: '20px'}}>Home</Link>
                     </li>
                     <li className='py-4 pl-10'>
-                        <Link to='book' className='font-semibold hover:text-gray-400 transition-all 1s' style={{fontSize: '20px'}}>About</Link>
+                        <Link to='/book' className='font-semibold hover:text-gray-400 transition-all 1s' style={{fontSize: '20px'}}>Books</Link>
                     </li>
                 </ul>
             </div>
