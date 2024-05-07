@@ -27,7 +27,7 @@ const SearchForm = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <div className='flex justify-center items-center border border-black bg-white py-5 rounded-full px-10'>
-                    <input type="text" placeholder='The Lost World ...' ref = {searchText} className='bg-transparent text-black lg:w-[25vw] pl-5' />
+                    <input type="text" placeholder='Search ...' ref = {searchText} className='bg-transparent text-black lg:w-[25vw] pl-5' />
                     <button type='submit' onClick={handleSubmit}>
                         <FaSearch size={25} className='text-black hover:text-gray-400 transition-all 1s'/>
                     </button>

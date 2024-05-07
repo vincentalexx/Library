@@ -7,9 +7,9 @@ const Navbar = () => {
     const [toggleMenu , setToggleMenu] = useState(false);
     const handleNavbar = () => setToggleMenu(!toggleMenu);
   return (
-    <nav className='fixed w-full bg-white ' id='navbar'>
+    <nav className='fixed w-full bg-white shadow-lg' id='navbar'>
         <div>
-            <div className='flex justify-between px-5'>
+            <div className='flex justify-between items-center px-16 md:px-32'>
                 <Link to='/' className='flex items-center'>
                     <img src={logo} alt="book" className='w-[10vh]'/>
                     <p>BookLab</p>
@@ -17,6 +17,16 @@ const Navbar = () => {
                 <button type='button' onClick={handleNavbar} className='lg:hidden z-20'>
                     <HiOutlineMenuAlt3 size={35} style={{color: `${toggleMenu ? '#fff' : '#010101'}`}} />
                 </button>
+                <div className='hidden lg:flex'>
+                    <ul className='flex'>
+                        <li className='py-4 px-10'>
+                            <Link to='/' className='font-semibold hover:text-gray-400 transition-all 1s' style={{fontSize: '20px'}}>Home</Link>
+                        </li>
+                        <li className='py-4 px-10'>
+                            <Link to='/book' className='font-semibold hover:text-gray-400 transition-all 1s' style={{fontSize: '20px'}}>Books</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div className={toggleMenu ? 'navbar-show navbar-collapse lg:hidden lg:bg-transparent' : 'navbar-collapse lg:hidden lg:bg-transparent'}>

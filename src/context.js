@@ -19,7 +19,8 @@ const AppProvider = ({children}) => {
             // console.log(docs);
 
             if(docs){
-                const newBooks = docs.slice(0, 20).map((bookSingle) => {
+                // const newBooks = docs.slice(0, 40).map((bookSingle) => {
+                const newBooks = docs.map((bookSingle) => {
                     const {key, author_name, cover_i, edition_count, first_publish_year, title} = bookSingle;
 
                     return {
